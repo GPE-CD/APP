@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102f40">
+<meta name="description" content="Projeto O Legislativo e a Avaliação de Políticas Públicas — documentação pública do GPE-CD.">
+<title>Projeto APP — O Legislativo e a Avaliação de Políticas Públicas</title>
+<style>
+:root{--navy:#102f40;--navy2:#0a2432;--gold:#b38a47;--paper:#f7f6f2;--ink:#1d2a30;--muted:#617078;--line:#ccd5d8;--soft:#eef2f2;--white:#fff;--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}button,summary{font:inherit}.container{width:min(1180px,calc(100% - 48px));margin:auto}
+.topbar{background:#071d29;color:#cbd7dc;border-bottom:1px solid #ffffff1b;font-size:11px;letter-spacing:.07em;text-transform:uppercase}.topbar .container{height:34px;display:flex;align-items:center;justify-content:space-between}.topbar strong{color:#fff}.header{position:sticky;top:0;z-index:30;background:rgba(247,246,242,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px}.mark{width:44px;height:44px;display:grid;place-items:center;background:var(--navy);color:#fff;font:700 17px var(--serif);border-bottom:3px solid var(--gold)}.brand-copy strong{display:block;font:700 15px var(--serif);letter-spacing:.01em}.brand-copy small{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.09em}.menu{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:700}.menu a{padding:28px 0;border-bottom:2px solid transparent}.menu a:hover{border-color:var(--gold);color:var(--navy)}
+.hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold)}.hero-grid{min-height:610px;display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:center}.hero-main{border-left:3px solid var(--gold);padding-left:34px}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#d9c7a4}.eyebrow:before{content:"";width:34px;height:1px;background:currentColor}h1{font:700 clamp(48px,6vw,80px)/1.02 var(--serif);letter-spacing:-.045em;margin:18px 0 25px;max-width:900px}.hero p{max-width:720px;color:#d7e0e3;font-size:18px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid #ffffff56;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.btn.primary{background:#fff;color:var(--navy);border-color:#fff}.btn:hover{transform:translateY(-1px)}.hero-aside{border:1px solid #ffffff28;padding:28px;background:#ffffff08}.hero-aside span{display:block;color:#d9c7a4;font-size:10px;text-transform:uppercase;letter-spacing:.13em}.hero-aside strong{display:block;font:700 28px/1.15 var(--serif);margin:12px 0 18px}.hero-aside p{font-size:13px;color:#b9c9d0;margin:0}
+.section{padding:95px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:170px 1fr;gap:30px;margin-bottom:48px}.section-no{font:700 12px var(--sans);letter-spacing:.14em;color:var(--gold);text-transform:uppercase;padding-top:10px}.section-title h2{font:700 clamp(34px,4vw,54px)/1.08 var(--serif);letter-spacing:-.035em;margin:4px 0 14px;color:var(--navy)}.section-title p{max-width:760px;color:var(--muted);font-size:16px}.quote{margin-top:38px;padding:28px 32px;border-left:3px solid var(--gold);background:#fff;font:700 24px/1.4 var(--serif);color:var(--navy)}
+.directory{border-top:1px solid #aebbc0}details.category{border-bottom:1px solid #bac6cb}details.category summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px 1fr 180px;align-items:center;gap:22px;padding:25px 16px;transition:.18s}details.category summary::-webkit-details-marker{display:none}details.category summary:hover{background:#edf1f1}details.category[open] summary{background:var(--navy);color:#fff}.num{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--gold)}.summary-copy{display:grid;gap:2px}.summary-copy .kicker{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#7b8990;font-weight:800}details[open] .summary-copy .kicker{color:#cfbc97}.summary-copy strong{font:700 27px/1.15 var(--serif)}.summary-copy small{font-size:12px;color:#65737b}details[open] .summary-copy small{color:#c7d3d7}.summary-action{justify-self:end;text-transform:uppercase;font-size:9px;letter-spacing:.09em;font-weight:800;display:flex;align-items:center;gap:12px}.summary-action b{width:31px;height:31px;border:1px solid #aebbc0;display:grid;place-items:center;font-size:17px;font-weight:400}details[open] .summary-action b{transform:rotate(45deg);border-color:#ffffff55}.panel{padding:30px 38px 38px;background:#edf1f2;border-top:1px solid #d2dadd}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:19px;margin-bottom:18px;border-bottom:1px solid #c6d0d4;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#66767d;font-weight:800}.panel-head a{color:var(--navy)}.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.doc{display:grid;grid-template-columns:54px 1fr 26px;gap:14px;align-items:center;min-height:92px;padding:16px;background:#fff;border:1px solid #cad4d8;transition:.18s}.doc:hover{border-color:#7c949e;transform:translateY(-1px)}.badge{font-size:8px;font-weight:900;letter-spacing:.08em;text-align:center;padding:6px 4px;background:#edf1f2;color:var(--navy);border:1px solid #d3dbde}.doc strong{display:block;font:700 16px/1.3 var(--serif);color:var(--navy)}.doc small{display:block;margin-top:4px;color:#6b7980;font-size:10px}.arrow{color:var(--gold);font-size:19px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:#fff;margin-top:38px}.stat{padding:26px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font:700 34px var(--serif);color:var(--navy)}.stat span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:4px}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:0;list-style:none}.team li{display:flex;align-items:center;gap:18px;background:#fff;border-bottom:1px solid var(--line);padding:17px 18px;font:700 16px var(--serif)}.team li span{font:800 9px var(--sans);color:var(--gold);letter-spacing:.1em}
+.public-box{background:var(--navy);color:#fff;padding:34px;border-left:4px solid var(--gold);display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.public-box h3{font:700 28px var(--serif);margin:0 0 8px}.public-box p{margin:0;color:#c5d1d6;font-size:13px;max-width:720px}
+.footer{background:var(--navy2);color:#c9d5da;border-top:4px solid var(--gold);padding:55px 0 24px}.footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:60px}.footer h3{margin:0 0 12px;color:#fff;font:700 22px var(--serif)}.footer p{max-width:650px;font-size:12px}.footer-links{display:grid;gap:8px;font-size:11px}.footer-bottom{margin-top:42px;padding-top:18px;border-top:1px solid #ffffff1f;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8fa2aa}
+:focus-visible{outline:3px solid #d0a354;outline-offset:3px}
+@media(max-width:850px){.menu{display:none}.hero-grid{grid-template-columns:1fr;min-height:540px;padding:70px 0}.hero-aside{display:none}.section-head{grid-template-columns:1fr}.section-no{padding:0}details.category summary{grid-template-columns:44px 1fr}.summary-action{grid-column:2;justify-self:start}.doc-grid,.team{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.public-box{grid-template-columns:1fr}}
+@media(max-width:560px){.container{width:min(100% - 30px,1180px)}.topbar .container span:last-child{display:none}.brand-copy small{display:none}h1{font-size:42px}.hero-main{padding-left:20px}.section{padding:70px 0}.panel{padding:24px 14px 28px}details.category summary{padding:21px 7px;gap:10px}.summary-copy strong{font-size:23px}.doc{grid-template-columns:46px 1fr 18px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span><strong>Projeto APP</strong> · O Legislativo e a Avaliação de Políticas Públicas</span><span>GPE-CD · Consultoria Legislativa</span></div></div>
+<header class="header"><nav class="container nav" aria-label="Navegação principal"><a class="brand" href="#inicio"><span class="mark">APP</span><span class="brand-copy"><strong>Projeto APP</strong><small>Pesquisa · documentação · memória</small></span></a><div class="menu"><a href="#projeto">O Projeto</a><a href="#documentacao">Documentação</a><a href="#equipe">Equipe</a><a href="https://github.com/GPE-CD/APP" target="_blank" rel="noopener">GitHub ↗</a></div></nav></header>
+<main id="inicio">
+<section class="hero"><div class="container hero-grid"><div class="hero-main"><span class="eyebrow">Grupo de Pesquisa e Extensão Institucional</span><h1>O Legislativo e a<br>Avaliação de Políticas Públicas</h1><p>Um arquivo vivo de pesquisa, memória e produção institucional da Consultoria Legislativa.</p><div class="actions"><a class="btn primary" href="#projeto">Conheça o projeto</a><a class="btn" href="#documentacao">Explorar documentação</a></div></div><aside class="hero-aside"><span>Documentação pública</span><strong>Organizada por módulos</strong><p>Notas técnicas, memórias, documentos do projeto e referências públicas reunidas em uma única interface.</p></aside></div></section>
+
+<section class="section" id="projeto"><div class="container"><div class="section-head"><div class="section-no">01 · O Projeto</div><div class="section-title"><span class="eyebrow" style="color:#87672f">Pesquisa aplicada</span><h2>Conhecer é o primeiro gesto de avaliar.</h2><p>O projeto <strong>“O Legislativo e a Avaliação de Políticas Públicas”</strong> integra o Grupo de Pesquisa e Extensão Institucional da Consultoria Legislativa. Este repositório reúne a documentação e a produção relacionada ao projeto, funcionando como espaço de organização e preservação dos seus documentos.</p><div class="quote">Avaliar políticas públicas é produzir melhores perguntas para decisões mais responsáveis.</div><div class="stats"><div class="stat"><strong>3</strong><span>pastas documentais no repositório</span></div><div class="stat"><strong>4</strong><span>módulos de navegação</span></div><div class="stat"><strong>9</strong><span>integrantes da equipe</span></div></div></div></div></div></section>
+
+<section class="section" id="documentacao"><div class="container"><div class="section-head"><div class="section-no">02 · Documentação</div><div class="section-title"><span class="eyebrow" style="color:#87672f">Arquivo público</span><h2>Um arquivo com quatro entradas.</h2><p>As categorias seguem os nomes das pastas e áreas públicas do repositório. Clique em uma categoria para abrir seus documentos sem sair da página.</p></div></div><div class="directory">
+    <details class="category">
+      <summary>
+        <span class="num">01</span>
+        <span class="summary-copy"><span class="kicker">Análise e evidência</span><strong>Notas Técnicas</strong><small>Notas, estudos e documentos de análise produzidos no âmbito do projeto.</small></span>
+        <span class="summary-action">Abrir categoria <b>+</b></span>
+      </summary>
+      <div class="panel">
+        <div class="panel-head"><span>4 documentos</span><a href="https://github.com/GPE-CD/APP/tree/main/01_Notas%20T%C3%A9cnicas" target="_blank" rel="noopener">Abrir pasta no GitHub ↗</a></div>
+        <div class="doc-grid"><a class="doc" href="https://github.com/GPE-CD/APP/blob/main/01_Notas%20T%C3%A9cnicas/2024_10302_6%20NT%20Monitoramento%2008%202024.pdf" target="_blank" rel="noopener">
+      <span class="badge">PDF</span>
+      <span><strong>Monitoramento — agosto de 2024</strong><small>Nota técnica · PDF</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/01_Notas%20T%C3%A9cnicas/NT%20atividades%20Projeto%20APP%202025.pdf" target="_blank" rel="noopener">
+      <span class="badge">PDF</span>
+      <span><strong>Atividades do Projeto APP — 2025</strong><small>Nota técnica · PDF</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/01_Notas%20T%C3%A9cnicas/NT%20revisada%20-%20Avalia%C3%A7%C3%A3o%20de%20Impacto%20Legislativo_%20Fabio%20Gomes%20-%2011%2009%202025.pdf" target="_blank" rel="noopener">
+      <span class="badge">PDF</span>
+      <span><strong>Avaliação de Impacto Legislativo</strong><small>Nota técnica revisada · PDF</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/01_Notas%20T%C3%A9cnicas/Situa%C3%A7%C3%A3o%20de%20proposi%C3%A7%C3%B5es%20sobre%20APP.docx" target="_blank" rel="noopener">
+      <span class="badge">DOCX</span>
+      <span><strong>Situação de proposições sobre APP</strong><small>Estudo · DOCX</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a></div>
+      </div>
+    </details>
+    <details class="category">
+      <summary>
+        <span class="num">02</span>
+        <span class="summary-copy"><span class="kicker">Trajetória e registro</span><strong>Memórias</strong><small>Registros e documentos relacionados à trajetória, às atividades e ao desenvolvimento do projeto.</small></span>
+        <span class="summary-action">Abrir categoria <b>+</b></span>
+      </summary>
+      <div class="panel">
+        <div class="panel-head"><span>5 documentos</span><a href="https://github.com/GPE-CD/APP/tree/main/02_Mem%C3%B3rias" target="_blank" rel="noopener">Abrir pasta no GitHub ↗</a></div>
+        <div class="doc-grid"><a class="doc" href="https://github.com/GPE-CD/APP/blob/main/02_Mem%C3%B3rias/Ajuda%20Mem%C3%B3ria%20-%20Projeto%20APP%20do%20GPE%20-%20Conle%20-%2029_02_24.docx" target="_blank" rel="noopener">
+      <span class="badge">DOCX</span>
+      <span><strong>Ajuda Memória — 29 de fevereiro de 2024</strong><small>Registro · DOCX</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/02_Mem%C3%B3rias/Ajuda%20Mem%C3%B3ria%20-%20Projeto%20APP%20do%20GPE%20-%20Conle%20-%2014_03_24.docx" target="_blank" rel="noopener">
+      <span class="badge">DOCX</span>
+      <span><strong>Ajuda Memória — 14 de março de 2024</strong><small>Registro · DOCX</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/02_Mem%C3%B3rias/Ajuda%20Mem%C3%B3ria%20-%20Projeto%20APP%20do%20GPE%20-%20Conle%20-%2018_04_24.docx" target="_blank" rel="noopener">
+      <span class="badge">DOCX</span>
+      <span><strong>Ajuda Memória — 18 de abril de 2024</strong><small>Registro · DOCX</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/02_Mem%C3%B3rias/Mem%C3%B3ria%20-%20Projeto%20APP%20do%20GPE%20-%20Conle%20-%2019_09_24%20rev.docx" target="_blank" rel="noopener">
+      <span class="badge">DOCX</span>
+      <span><strong>Memória — 19 de setembro de 2024</strong><small>Registro revisado · DOCX</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+<a class="doc" href="https://github.com/GPE-CD/APP/blob/main/02_Mem%C3%B3rias/Relat%C3%B3rio%20de%20atividades%20do%20Projeto%20APP%20-%202023%20final%20rev.pdf" target="_blank" rel="noopener">
+      <span class="badge">PDF</span>
+      <span><strong>Relatório de atividades — 2023</strong><small>Relatório · PDF</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a></div>
+      </div>
+    </details>
+    <details class="category">
+      <summary>
+        <span class="num">03</span>
+        <span class="summary-copy"><span class="kicker">Propostas e iniciativas</span><strong>Projetos</strong><small>Documentos relacionados ao projeto, suas propostas e iniciativas de pesquisa e extensão.</small></span>
+        <span class="summary-action">Abrir categoria <b>+</b></span>
+      </summary>
+      <div class="panel">
+        <div class="panel-head"><span>1 documento</span><a href="https://github.com/GPE-CD/APP/tree/main/03_Projetos" target="_blank" rel="noopener">Abrir pasta no GitHub ↗</a></div>
+        <div class="doc-grid"><a class="doc" href="https://github.com/GPE-CD/APP/blob/main/03_Projetos/Projeto%20-%20APP%20-%20rev%20dezembro%202023.pdf" target="_blank" rel="noopener">
+      <span class="badge">PDF</span>
+      <span><strong>Projeto APP — versão revisada, dezembro de 2023</strong><small>Documento do projeto · PDF</small></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a></div>
+      </div>
+    </details>
+<details class="category">
+<summary><span class="num">04</span><span class="summary-copy"><span class="kicker">Acesso público</span><strong>Atividades Gerais</strong><small>Uma área separada para referências e arquivos de acesso público, sem exposição automática de documentos.</small></span><span class="summary-action">Abrir categoria <b>+</b></span></summary>
+<div class="panel"><div class="public-box"><div><h3>Referências públicas, sem exposição automática.</h3><p>Esta área aponta para os acessos públicos do projeto. Os documentos não são listados automaticamente.</p></div><div class="actions" style="margin:0"><a class="btn primary" href="https://github.com/GPE-CD/APP/blob/main/README.md" target="_blank" rel="noopener">README do projeto</a><a class="btn" href="https://github.com/GPE-CD/APP" target="_blank" rel="noopener">Repositório público</a></div></div></div>
+</details>
+</div></div></section>
+
+<section class="section" id="equipe"><div class="container"><div class="section-head"><div class="section-no">03 · Equipe</div><div class="section-title"><span class="eyebrow" style="color:#87672f">Quem faz</span><h2>As pessoas por trás do arquivo.</h2><p>O projeto é construído por uma equipe multidisciplinar vinculada ao Grupo de Pesquisa e Extensão Institucional da Consultoria Legislativa.</p></div></div><ul class="team"><li><span>01</span>Claudionor Rocha</li>
+<li><span>02</span>Fábio de Barros Correia Gomes</li>
+<li><span>03</span>Geraldo Magela Leite</li>
+<li><span>04</span>Marcus Peixoto</li>
+<li><span>05</span>Nilson Rodrigues de Assis</li>
+<li><span>06</span>Paula Gonçalves Ferreira Santos</li>
+<li><span>07</span>Ricardo Chaves de Rezende Martins</li>
+<li><span>08</span>Rita de Cássia Leal Fonseca dos Santos</li>
+<li><span>09</span>Thiago Costa Monteiro Caldeira</li></ul></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h3>Projeto APP</h3><p>Projeto “O Legislativo e a Avaliação de Políticas Públicas”. Documentação e produção do projeto em acesso público no GitHub.</p></div><div class="footer-links"><a href="#projeto">O Projeto</a><a href="#documentacao">Documentação</a><a href="#equipe">Equipe</a><a href="https://github.com/GPE-CD/APP" target="_blank" rel="noopener">GPE-CD/APP ↗</a></div></div><div class="footer-bottom">GPE-CD · Consultoria Legislativa · Brasília</div></div></footer>
+<script>
+document.querySelectorAll('details.category').forEach(function(d){d.addEventListener('toggle',function(){if(!d.open)return;document.querySelectorAll('details.category[open]').forEach(function(o){if(o!==d)o.open=false})})})
+</script>
+</body></html>

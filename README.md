@@ -21,9 +21,9 @@ Este repositório reúne a documentação e a produção relacionada ao projeto,
 * **Nilson Rodrigues de Assis**
 * **Paula Gonçalves Ferreira Santos**
 * **Ricardo Chaves de Rezende Martins**
-* **Rita de Cássia Leal Fonseca dos Santos**
-* **Thiago Costa Monteiro Caldeira**
-
+* **Felipe de Oliveira Lopes Cavalcanti**
+* **Paulo Eduardo Frederico**
+* **Gerson José de Andrade Júnior**
 ---
 
 ## 📚 Estrutura do repositório

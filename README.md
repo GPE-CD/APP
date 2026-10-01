@@ -16,14 +16,15 @@ Este repositório reúne a documentação e a produção relacionada ao projeto,
 
 * **Claudionor Rocha**
 * **Fábio de Barros Correia Gomes** — Coordenador
+* **Felipe de Oliveira Lopes Cavalcanti**
 * **Geraldo Magela Leite**
+* **Gerson José de Andrade Júnior**
+* **Leonan Costa Gomes** - Estagiário
 * **Marcus Peixoto**
 * **Nilson Rodrigues de Assis**
 * **Paula Gonçalves Ferreira Santos**
-* **Ricardo Chaves de Rezende Martins**
-* **Felipe de Oliveira Lopes Cavalcanti**
 * **Paulo Eduardo Frederico**
-* **Gerson José de Andrade Júnior**
+* **Ricardo Chaves de Rezende Martins**
 ---
 
 ## 📚 Estrutura do repositório

@@ -22,7 +22,6 @@ Este repositório reúne a documentação e a produção relacionada ao projeto,
 * **Leonan Costa Gomes** - Estagiário
 * **Marcus Peixoto**
 * **Nilson Rodrigues de Assis**
-* **Paula Gonçalves Ferreira Santos**
 * **Paulo Eduardo Frederico**
 * **Ricardo Chaves de Rezende Martins**
 ---

@@ -62,7 +62,6 @@ Estão disponíveis neste repositório:
 * **memórias**;
 * outros documentos de interesse do projeto.
   
-
 ---
 
 

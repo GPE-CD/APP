@@ -1845,7 +1845,7 @@ a:focus-visible,button:focus-visible,[role="button"]:focus-visible{outline:3px s
     if(actions){
       const actionLinks=actions.querySelectorAll('a');
       if(actionLinks[0]) actionLinks[0].childNodes[0].textContent='Conheça o projeto ';
-      if(actionLinks[1]) plainLinkFrom(actionLinks[1],'#modulos-projeto','Conheça os módulos →');
+      if(actionLinks[1]) plainLinkFrom(actionLinks[1],'#/modulos','Conheça os módulos →');
     }
     const aside=hero.querySelector('.hero-aside');
     if(aside) aside.classList.add('home-v2-hidden');

@@ -162,8 +162,8 @@ export default {
             descricao: "Documento anual encaminhado pelo Poder Executivo ao Congresso Nacional com informações sobre a situação do País e as ações governamentais.",
             fontes: [["Acessar acervo oficial","https://www.biblioteca.presidencia.gov.br/publicacoes-oficiais/mensagem-ao-congresso-nacional"]],
             anos: [
-              ["2026",[["PDF oficial","https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf"],["Cópia alternativa — Poder360","https://static.poder360.com.br/2026/02/mensagem-ao-congresso-nacional-2026.pdf"]]],
-              ["2025",[["PDF oficial","https://www.gov.br/casacivil/pt-br/assuntos/noticias/mensagem_pdf/mcn-2025-digital-v1.pdf"]]],
+              ["2026",[["PDF oficial","https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf/@@download/file"]]],
+              ["2025",[["PDF oficial","https://www.gov.br/planalto/pt-br/acesso-a-informacao/acoes-e-programas/governanca/mensagem-ao-congresso-nacional/mcn2025digitalv1.pdf"]]],
               ["2024",[["PDF oficial","https://www.gov.br/planalto/pt-br/acesso-a-informacao/acoes-e-programas/governanca/mensagem-ao-congresso-nacional/mensagemaocongressonacional2024_vf.pdf"],["Cópia alternativa — CONASS","https://www.conass.org.br/wp-content/uploads/2024/02/8.2-Mensagem-do-Congresso-Nacional-2024.pdf"]]],
               ["2023",[["PDF oficial","https://www.gov.br/planalto/pt-br/acesso-a-informacao/acoes-e-programas/governanca/mensagem-ao-congresso-nacional/MensagemaoCongressoNacional2023.pdf"],["Cópia alternativa — Tele.Síntese","https://telesintese.com.br/wp-content/uploads/2023/02/Mensagem-do-Presidente-ao-Congresso.pdf"]]]
             ]

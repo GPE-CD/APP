@@ -2096,5 +2096,336 @@ document.addEventListener('click',async function(e){
 })();
 </script>
 
+
+<style id="app-general-update-2026">
+/* Atualização geral do Projeto APP — 29/10/2026 */
+
+/* Equipe: espaço para links externos sem perder a leitura da lista existente. */
+.team-row{
+  grid-template-columns:65px minmax(0,1fr) 135px minmax(220px,auto) !important;
+}
+.team-row > span:nth-child(3){
+  color:var(--ink-soft);
+  font:500 10px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.team-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.team-links a{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.56);
+  color:var(--ink);
+  border-radius:999px;
+  padding:7px 10px;
+  font:600 10px/1 var(--sans);
+  transition:background .18s,transform .18s,border-color .18s;
+}
+.team-links a:hover{
+  background:var(--white);
+  border-color:#18353655;
+  transform:translateY(-1px);
+}
+.team-links a.team-email{
+  background:var(--paper-deep);
+}
+
+/* Contato do Projeto, ao final da página Equipe. */
+.app-contact-card{
+  margin-top:54px;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--line);
+  padding:28px 0 30px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:34px;
+  align-items:center;
+}
+.app-contact-card h2{
+  margin:9px 0 8px;
+  font:600 30px/1.08 var(--serif);
+  letter-spacing:-.035em;
+}
+.app-contact-card p{
+  margin:0;
+  color:var(--ink-soft);
+  font-size:13px;
+  line-height:1.6;
+}
+.app-contact-email{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding-bottom:5px;
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+/* Vínculo institucional: bloco compacto na página O Projeto. */
+.app-institutional-links{
+  margin:0 0 54px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.62);
+  padding:22px 24px;
+  display:grid;
+  grid-template-columns:minmax(180px,.7fr) 1fr 1fr;
+  gap:14px 24px;
+  align-items:center;
+}
+.app-institutional-links .app-inst-label{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.app-institutional-links .app-inst-label strong{
+  font:600 22px/1.1 var(--serif);
+  letter-spacing:-.03em;
+}
+.app-institutional-links a{
+  min-height:54px;
+  border-left:1px solid var(--line);
+  padding-left:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:4px;
+  color:var(--ink);
+}
+.app-institutional-links a strong{
+  font-size:12px;
+}
+.app-institutional-links a small{
+  color:var(--ink-soft);
+  font-size:10px;
+  line-height:1.4;
+}
+.app-institutional-links a:hover strong{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* Terceira coluna do rodapé, aproveitando a grade já existente. */
+.footer-links.app-gpe-links a{
+  line-height:1.45;
+}
+.footer-links.app-gpe-links a.app-footer-email{
+  color:#fff;
+}
+
+/* Links externos ganham indicação textual suficiente sem interferir na identidade visual. */
+.app-external-arrow{
+  font-size:.9em;
+  opacity:.75;
+}
+
+@media (max-width:900px){
+  .team-row{
+    grid-template-columns:45px minmax(0,1fr) 120px !important;
+  }
+  .team-links{
+    grid-column:2 / -1;
+    justify-content:flex-start;
+    padding-top:2px;
+  }
+  .app-institutional-links{
+    grid-template-columns:1fr 1fr;
+  }
+  .app-institutional-links .app-inst-label{
+    grid-column:1 / -1;
+  }
+  .app-institutional-links a:first-of-type{
+    border-left:0;
+    padding-left:0;
+  }
+}
+@media (max-width:640px){
+  .team-row{
+    grid-template-columns:36px minmax(0,1fr) !important;
+    gap:8px 16px !important;
+  }
+  .team-row > span:nth-child(3){
+    grid-column:2;
+  }
+  .team-links{
+    grid-column:2;
+    gap:7px;
+    padding-top:5px;
+  }
+  .team-links a{
+    padding:7px 9px;
+  }
+  .app-contact-card{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .app-contact-email{
+    width:max-content;
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  .app-institutional-links{
+    grid-template-columns:1fr;
+    padding:20px;
+  }
+  .app-institutional-links .app-inst-label{
+    grid-column:auto;
+  }
+  .app-institutional-links a,
+  .app-institutional-links a:first-of-type{
+    border-left:0;
+    border-top:1px solid var(--line);
+    padding:15px 0 0;
+  }
+}
+</style>
+
+
+<script id="app-general-update-2026">
+(function(){
+  const LATTES = {
+    'Claudionor Rocha': 'http://lattes.cnpq.br/2962387952012905',
+    'Fábio de Barros Correia Gomes': 'http://lattes.cnpq.br/5859254146907966',
+    'Felipe de Oliveira Lopes Cavalcanti': 'http://lattes.cnpq.br/3084485452071267',
+    'Geraldo Magela Leite': 'http://lattes.cnpq.br/8043531736127361',
+    'Gerson José de Andrade Júnior': 'http://lattes.cnpq.br/6624851450135943',
+    'Leonan Costa Gomes': 'http://lattes.cnpq.br/0118259727441049',
+    'Marcus Peixoto': 'http://lattes.cnpq.br/9137130647669011',
+    'Nilson Rodrigues de Assis': 'http://lattes.cnpq.br/3797450769346312',
+    'Paulo Eduardo Frederico': 'http://lattes.cnpq.br/2278882982110792',
+    'Ricardo Chaves de Rezende Martins': 'http://lattes.cnpq.br/6914636917207339'
+  };
+  const PROJECT_EMAIL = 'fabio.gomes@camara.leg.br';
+  const GPE_SITE = 'https://gpe-cd.github.io/';
+  const GPE_DGP = 'http://dgp.cnpq.br/dgp/espelhogrupo/768240';
+
+  function externalLink(href,label,cls){
+    const a=document.createElement('a');
+    a.href=href;
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    if(cls) a.className=cls;
+    a.innerHTML=label+' <span class="app-external-arrow" aria-hidden="true">↗</span>';
+    return a;
+  }
+
+  function applyTeamLinks(){
+    const list=document.querySelector('.team-list');
+    if(!list) return;
+
+    list.querySelectorAll('.team-row').forEach(row=>{
+      const nameEl=row.querySelector('strong');
+      if(!nameEl) return;
+      const name=nameEl.textContent.trim();
+      const url=LATTES[name];
+      if(!url) return;
+
+      let actions=row.querySelector('.team-links');
+      if(!actions){
+        actions=document.createElement('div');
+        actions.className='team-links';
+        row.appendChild(actions);
+      }
+
+      if(!actions.querySelector('[data-kind="lattes"]')){
+        const a=externalLink(url,'Currículo Lattes');
+        a.dataset.kind='lattes';
+        a.setAttribute('aria-label','Abrir Currículo Lattes de '+name);
+        actions.appendChild(a);
+      }
+
+      if(name==='Fábio de Barros Correia Gomes' && !actions.querySelector('[data-kind="email"]')){
+        const a=document.createElement('a');
+        a.href='mailto:'+PROJECT_EMAIL;
+        a.className='team-email';
+        a.dataset.kind='email';
+        a.textContent='E-mail';
+        a.setAttribute('aria-label','Enviar e-mail para Fábio de Barros Correia Gomes');
+        actions.appendChild(a);
+      }
+    });
+
+    const inner=list.closest('.inner-content');
+    if(inner && !inner.querySelector('.app-contact-card')){
+      const card=document.createElement('section');
+      card.className='app-contact-card';
+      card.setAttribute('aria-label','Contato do Projeto APP');
+      card.innerHTML=
+        '<div><span class="eyebrow">Contato do projeto</span>'+
+        '<h2>Contato</h2>'+
+        '<p>Para contato com o Projeto APP, utilize o endereço eletrônico da coordenação.</p></div>'+
+        '<a class="app-contact-email" href="mailto:'+PROJECT_EMAIL+'">'+PROJECT_EMAIL+'</a>';
+      list.insertAdjacentElement('afterend',card);
+    }
+  }
+
+  function applyProjectInstitutionalLinks(){
+    const projectContent=document.querySelector('.project-page .project-content');
+    if(!projectContent || projectContent.querySelector('.app-institutional-links')) return;
+
+    const origin=projectContent.querySelector('.project-origin');
+    if(!origin) return;
+
+    const box=document.createElement('aside');
+    box.className='app-institutional-links';
+    box.setAttribute('aria-label','Links do GPE-Conle');
+    box.innerHTML=
+      '<div class="app-inst-label"><span class="eyebrow">GPE-Conle</span><strong>Grupo de pesquisa</strong></div>'+
+      '<a href="'+GPE_SITE+'" target="_blank" rel="noopener noreferrer">'+
+        '<strong>Site do GPE-Conle <span class="app-external-arrow" aria-hidden="true">↗</span></strong>'+
+        '<small>Página de apresentação do grupo e de seus projetos</small>'+
+      '</a>'+
+      '<a href="'+GPE_DGP+'" target="_blank" rel="noopener noreferrer">'+
+        '<strong>DGP/CNPq <span class="app-external-arrow" aria-hidden="true">↗</span></strong>'+
+        '<small>Registro oficial do grupo no Diretório dos Grupos de Pesquisa</small>'+
+      '</a>';
+    origin.insertAdjacentElement('afterend',box);
+  }
+
+  function applyFooterLinks(){
+    const grid=document.querySelector('.site-footer .footer-grid');
+    if(!grid || grid.querySelector('.app-gpe-links')) return;
+
+    const col=document.createElement('div');
+    col.className='footer-links app-gpe-links';
+    col.innerHTML=
+      '<span class="eyebrow">GPE-Conle</span>'+
+      '<a href="'+GPE_SITE+'" target="_blank" rel="noopener noreferrer">Site do GPE-Conle <span aria-hidden="true">↗</span></a>'+
+      '<a href="'+GPE_DGP+'" target="_blank" rel="noopener noreferrer">DGP/CNPq <span aria-hidden="true">↗</span></a>'+
+      '<a class="app-footer-email" href="mailto:'+PROJECT_EMAIL+'">Contato do Projeto APP</a>';
+    grid.appendChild(col);
+  }
+
+  function applyAll(){
+    applyTeamLinks();
+    applyProjectInstitutionalLinks();
+    applyFooterLinks();
+  }
+
+  let frame=0;
+  function schedule(){
+    cancelAnimationFrame(frame);
+    frame=requestAnimationFrame(applyAll);
+  }
+
+  document.addEventListener('DOMContentLoaded',schedule);
+  window.addEventListener('hashchange',()=>setTimeout(schedule,20));
+  window.addEventListener('popstate',()=>setTimeout(schedule,20));
+  new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true});
+  schedule();
+})();
+</script>
+
 </body>
 </html>

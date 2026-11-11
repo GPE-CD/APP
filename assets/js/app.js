@@ -362,7 +362,10 @@ function sourceCollection(data) {
     </details>`).join("");
   return `<section class="expost-source-collection">
     <div class="monitor-instruments-head expost-collection-head">
-      <div><span class="eyebrow">${esc(data.eyebrow || "Fontes")}</span><h2>${esc(data.titulo)}</h2></div>
+      <div>
+        <h2>${esc(data.eyebrow || "Fontes")}</h2>
+        <p class="expost-collection-subtitle">${esc(data.titulo)}</p>
+      </div>
       <div><p>${esc(data.texto)}</p>${data.nota ? `<p class="expost-collection-note">${esc(data.nota)}</p>` : ""}</div>
     </div>
     <div class="expost-source-links">${fontes}</div><div class="expost-cycles">${ciclos}</div>
@@ -386,6 +389,8 @@ function modulePage(m) {
   const cats = m.categorias || [];
   const baseNormativa = m.key==="monitoramento" ? cats.filter(c=>c.categoria==="Base normativa") : [];
   const principais = m.key==="monitoramento" ? cats.filter(c=>c.categoria!=="Base normativa") : cats;
+  const expostProdutos = m.key==="avaliacao-ex-post" ? cats.filter(c=>c.categoria==="Produtos associados ao módulo") : [];
+  const expostReferencias = m.key==="avaliacao-ex-post" ? cats.filter(c=>c.categoria!=="Produtos associados ao módulo") : [];
 
   return `
   <div class="inner-page ${moduleClass}">
@@ -405,12 +410,22 @@ function modulePage(m) {
         <p>${esc(m.complemento)}</p>
       </div>
       ${painel}
-      ${sourceCollection(m.colecao)}
-      <div class="catalog-list">
-        ${principais.map(c=>catalogGroup(c,m.key)).join("")}
-        ${m.key==="monitoramento" ? instruments(m.instrumentos) : ""}
-        ${baseNormativa.map(c=>catalogGroup(c,m.key)).join("")}
-      </div>
+      ${m.key==="avaliacao-ex-post" ? `
+        <div class="catalog-list expost-products-first">
+          ${expostProdutos.map(c=>catalogGroup(c,m.key)).join("")}
+        </div>
+        ${sourceCollection(m.colecao)}
+        <div class="catalog-list expost-references-after">
+          ${expostReferencias.map(c=>catalogGroup(c,m.key)).join("")}
+        </div>
+      ` : `
+        ${sourceCollection(m.colecao)}
+        <div class="catalog-list">
+          ${principais.map(c=>catalogGroup(c,m.key)).join("")}
+          ${m.key==="monitoramento" ? instruments(m.instrumentos) : ""}
+          ${baseNormativa.map(c=>catalogGroup(c,m.key)).join("")}
+        </div>
+      `}
       <a class="back-link" href="#/modulos"><span class="back-chevron">${arrow}</span> Voltar aos módulos</a>
     </div>
   </div>`;

@@ -340,6 +340,35 @@ function instruments(data) {
   </section>`;
 }
 
+function sourceCollection(data) {
+  if (!data) return "";
+  const fontes = (data.fontesInstitucionais || []).map(f => `
+    <a class="expost-source-link" target="_blank" rel="noopener noreferrer" href="${esc(f.href)}">
+      <strong>${esc(f.titulo)}</strong><small>${esc(f.subtitulo || "")}</small><span aria-hidden="true">${external}</span>
+    </a>`).join("");
+  const ciclos = (data.ciclos || []).map(ciclo => `
+    <details class="expost-cycle"${ciclo.aberto ? " open" : ""}>
+      <summary><span>${esc(ciclo.titulo)}</span><small>${ciclo.avaliacoes.length} avaliação${ciclo.avaliacoes.length === 1 ? "" : "ões"}</small></summary>
+      <div class="expost-cycle-body">
+        ${ciclo.avaliacoes.map(av => `
+          <article class="expost-evaluation-card">
+            <div class="expost-evaluation-head"><div>
+              <div class="expost-meta"><span class="expost-tag ${av.tipo === "Subsídio" ? "subsidio" : "gasto"}">${esc(av.tipo)}</span><span>${esc(av.conselho)}</span><span>Publicação: ${esc(av.publicacao)}</span></div>
+              <h4>${esc(av.titulo)}</h4><p>${esc(av.descricao)}</p>
+            </div></div>
+            <div class="expost-document-links">${av.documentos.map(([label,url])=>`<a target="_blank" rel="noopener noreferrer" href="${esc(url)}">${esc(label)} <span aria-hidden="true">${external}</span></a>`).join("")}</div>
+          </article>`).join("")}
+      </div>
+    </details>`).join("");
+  return `<section class="expost-source-collection">
+    <div class="monitor-instruments-head expost-collection-head">
+      <div><span class="eyebrow">${esc(data.eyebrow || "Fontes")}</span><h2>${esc(data.titulo)}</h2></div>
+      <div><p>${esc(data.texto)}</p>${data.nota ? `<p class="expost-collection-note">${esc(data.nota)}</p>` : ""}</div>
+    </div>
+    <div class="expost-source-links">${fontes}</div><div class="expost-cycles">${ciclos}</div>
+  </section>`;
+}
+
 function modulePage(m) {
   const moduleClass = {
     monitoramento:"monitor-module", ail:"ail-module", "meta-avaliacao":"meta-module",
@@ -376,6 +405,7 @@ function modulePage(m) {
         <p>${esc(m.complemento)}</p>
       </div>
       ${painel}
+      ${sourceCollection(m.colecao)}
       <div class="catalog-list">
         ${principais.map(c=>catalogGroup(c,m.key)).join("")}
         ${m.key==="monitoramento" ? instruments(m.instrumentos) : ""}

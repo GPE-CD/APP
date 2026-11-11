@@ -1647,3 +1647,30 @@ a[data-route] { cursor:pointer; }
 .expost-document-links a:hover{color:var(--coral);border-color:var(--coral)}
 .expost-module .catalog-list{margin-top:0}
 @media(max-width:700px){.expost-source-links{grid-template-columns:1fr}.expost-cycle>summary{align-items:flex-start}.expost-cycle>summary>span{font-size:20px}.expost-evaluation-head h4{font-size:18px}}
+
+
+/* Refinamentos de hierarquia — Avaliação ex post */
+.expost-products-first{
+  margin-bottom:38px;
+}
+.expost-products-first .catalog-group{
+  margin-bottom:0;
+}
+.expost-collection-head h2{
+  margin:0 0 7px;
+  font:600 30px/1.08 var(--serif);
+  letter-spacing:-.035em;
+}
+.expost-collection-subtitle{
+  margin:0 !important;
+  color:var(--ink-soft) !important;
+  font:600 15px/1.35 var(--serif) !important;
+  letter-spacing:-.01em;
+}
+.expost-references-after{
+  margin-top:42px;
+}
+@media(max-width:700px){
+  .expost-collection-head h2{font-size:26px}
+  .expost-collection-subtitle{font-size:14px !important}
+}
